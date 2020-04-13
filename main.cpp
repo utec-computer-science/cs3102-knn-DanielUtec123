@@ -60,14 +60,16 @@ vector<coord_t> knn ( int k, vector<coord_t> &points, const coord_t &q){
 
 
 
-    cout << "K nierest"<< endl;
+
+    vector<coord_t> ret;
 
     for (auto it = point_distances.begin(); it != point_distances.begin()+k; it++){
-        cout << it->point << " " << it->distance << endl;
-
+ //       cout << it->point << " " << it->distance << endl;
+        ret.push_back(it->point);
     }
 
-    return vector<coord_t>();
+
+    return ret;
 }
 
 
